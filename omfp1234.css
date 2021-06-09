@@ -1,0 +1,135 @@
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Head */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#h1_page1 {
+  width: 80%;
+}
+
+.top_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.photos_pages {
+  width: 100%;
+  height: 30em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pos_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  top: 3em;
+}
+
+/* section */
+#bloc_section_page1 {
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 20px;
+  position: relative;
+  top: -4em;
+}
+
+#h2_page2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.order_blocs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.blocs_meals {
+  width: 100%;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.meals {
+  border-radius: 15px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.mealandprice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -2em;
+}
+
+.button_bot_pages {
+  padding-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  #pos_icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #bloc_section_page1 {
+    width: 100%;
+  }
+  .order_blocs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blocs_meals {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=omfp1234.css.map */

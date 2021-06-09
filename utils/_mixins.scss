@@ -1,0 +1,20 @@
+@mixin body{
+  margin: auto;
+  max-width: 100%;
+  font-family: $font-main;
+}
+
+@mixin order_button{
+    border-radius: 100px;
+  padding: 0.5em;
+  font-size: 25px;
+  font-weight: 500;
+  width: auto;
+}
+
+@mixin position_button{
+    display: flex;
+  justify-content: center;
+  background-color: $bgcolor-main;
+  padding-bottom: 2em;
+}

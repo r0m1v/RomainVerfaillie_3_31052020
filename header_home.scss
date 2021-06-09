@@ -1,8 +1,5 @@
 body {
-  border: solid 3px red;
-  margin: auto;
-  max-width: 100%;
-  font-family: $font-main;
+@include body;
 }
 
 img {
@@ -53,11 +50,7 @@ nav{
 }
 
 #button_home{
-  border-radius: 100px;
-  padding: 0.5em;
-  font-size: 25px;
-  font-weight: 500;
-  width: auto;
+  @include order_button;
 }
 
 nav{
@@ -81,10 +74,7 @@ nav{
 }
 
 .line_button{
-  display: flex;
-  justify-content: center;
-  background-color: $bgcolor-main;
-  padding-bottom: 2em;
+@include position_button;
 }
 
 @media screen and (max-width: 768px) {
@@ -109,7 +99,7 @@ nav{
   body,
   #button_home,
   .blocs_fonc{
-    font-size: 5vmin;
+    font-size: $font-size-responsive;
   }
 }
 
