@@ -1,0 +1,115 @@
+body {
+  border: solid 3px red;
+  margin: auto;
+  max-width: 100%;
+  font-family: $font-main;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.bold{
+  font-family: $font-main-bold;
+}
+.font-title {
+  font-family: $font-title;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+nav{
+  padding-bottom: 2em;
+}
+
+.marge_h2_home{
+ display: flex;
+ justify-content: center;
+}
+
+#bloc_home1 {
+  display: flex;
+  justify-content: center;
+  background-color: $bgcolor-secondary;
+  padding: 1em;
+}
+
+#bloc_home2 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: $bgcolor-main;
+}
+
+.border_figure{
+  border: 1px solid black;
+  border-radius: 100%;
+  position: relative;
+  left: -1.6em;
+}
+
+#button_home{
+  border-radius: 100px;
+  padding: 0.5em;
+  font-size: 25px;
+  font-weight: 500;
+  width: auto;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.blocs_fonc{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 1.3rem;
+  font-size: 1rem;
+  width: auto;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.marge_home{
+  padding-left: 0.5em;
+}
+
+.line_button{
+  display: flex;
+  justify-content: center;
+  background-color: $bgcolor-main;
+  padding-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+    flex-direction: column;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+  }
+
+  .marge_h2_home{
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .blocs_fonc{
+    max-width: 100%;
+    margin: 0;
+}
+}
+
+@media screen and (max-width: 480px) {
+  body,
+  #button_home,
+  .blocs_fonc{
+    font-size: 5vmin;
+  }
+}
+

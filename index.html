@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="ohmyfood.css" />
+    <link rel="stylesheet" href="main.css" />
     <script
       src="https://kit.fontawesome.com/3d0e2c9533.js"
       crossorigin="anonymous"
@@ -13,36 +13,62 @@
 
   <body>
     <header>
-      <h1 class="font_shrikhand">ohmyfood</h1>
-      <div><i class="fas fa-map-marker-alt"></i> Paris, Belleville</div>
-      <h2>Réservez le menu qui vous convient</h2>
-      <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-      <button type="submit">Explorer nos restaurants</button>
-      <nav>
-        <h2>Fonctionnement</h2>
-        <button>
-          <i class="fas fa-mobile-alt"></i>Choisissez un restaurant
-        </button>
-        <button><i class="fas fa-list-ul"></i>Composez votre menu</button>
-        <button><i class="fas fa-store"></i>Dégustez au restaurant</button>
+      <h1 id="top_page"class="font-title">ohmyfood</h1>
+      <div id="bloc_home1"><i class="fas fa-map-marker-alt"></i><span class="marge_home">Paris, Belleville</span></div>
+      <div id="bloc_home2"><h2 class="bold">Réservez le menu qui vous convient</h2>
+      <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p></div>
+      <div class="line_button"><button type="submit" id="button_home" class="bold">Explorer nos restaurants</button></div>
+      <h2 class="bold marge_h2_home">Fonctionnement</h2>
+        <nav>
+        <div class="blocs_fonc"><span class="border_figure">1</span><i class="fas fa-mobile-alt"></i><span class="marge_home">Choisissez un restaurant</span></div><br>
+        <div class="blocs_fonc"><span class="border_figure">2</span><i class="fas fa-list-ul"></i><span class="marge_home">Composez votre menu</span></div><br>
+        <div class="blocs_fonc"><span class="border_figure">3</span><i class="fas fa-store"></i><span class="marge_home">Dégustez au restaurant</span></div>
       </nav>
     </header>
-    <section><h2>Restaurants</h2>
-    <div>
-      <a href=""><h3>La palette du goût</h3>Ménilmontant <i class="fas fa-heart"></i></a>
-      <a href=""><h3>La note enchantée</h3>Charonne</a><i class="fas fa-heart"></i></a>
-      <a href=""><h3>A la française</h3>Cité Rouge</a><i class="fas fa-heart"></i></a>
-      <a href=""><h3>Le délice des sens</h3>Folie-Méricourt</a><i class="fas fa-heart"></i></a>
-    </div>
+    <section><h2 class="bold marge_h2_home">Restaurants</h2>
+      <div id="blocs_restau">
+        <div class="bloc_restau">
+        <a class="border">
+          <img src="photos/photo1.jpg" alt="La palette du gout" class="photo_rest"/>
+            <div class="text_icone">
+              <div class="text_img"><h3>La palette du goût</h3><br>Ménilmontant</div>
+                <span class="pos_icon"><i class="fas fa-heart size-icon"></i></span>
+            </div>
+        </a>
+        <a class="border">
+          <img src="photos/photo2.jpg" alt="La note enchantée" class="photo_rest"/>
+              <div class="text_icone">
+                <div class="text_img"><h3>La note enchantée</h3><br>Charonne</div>
+                  <span class="pos_icon"><i class="fas fa-heart size-icon"></i></span>
+              </div>
+        </a>
+      </div>
+      <div class="bloc_restau">
+        <a class="border">
+          <img src="photos/photo3.jpg" alt="A la francaise" class="photo_rest"/>
+              <div class="text_icone">
+                <div class="text_img"><h3>A la française</h3><br>Cité Rouge</div>
+                  <span class="pos_icon"><i class="fas fa-heart size-icon"></i></span>
+              </div>
+        </a>
+        <a class="border">
+          <img src="photos/photo4.jpg" alt="Le delice des sens" class="photo_rest"/>
+            <div class="text_icone">
+              <div class="text_img"><h3>Le délice des sens</h3><br>Folie-Méricourt</div>
+                <span class="pos_icon"><i class="fas fa-heart size-icon"></i></span>
+            </div>  
+        </a>
+      </div>
+      </div>
     </section>
     <footer>
-      <h3 class="font_shrikhand">ohmyfood</h3>
-      <ul>
-      <li> <i class="fas fa-utensils"></i>Proposer un restaurant</li>
-      <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-      <li>Mentions légales</li>
-      <li>Contact</li>
-    </ul>
+      <h3 id="title-footer" class="font-title">ohmyfood</h3>
+      <div id="bloc_footer">
+      <a href="#top_page" class="links_footer"><i class="fas fa-utensils marge_footer"></i>Proposer un restaurant</a>
+      <a href="#top_page" class="links_footer"><i class="fas fa-hands-helping marge_footer"></i>Devenir partenaire</a>
+      <a href="#top_page" class="links_footer">Mentions légales</a>
+      <a href="#top_page" class="links_footer">Contact</a>
+    </div>
     </footer>
   </body>
 </html>

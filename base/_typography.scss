@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Shrikhand-Regular";
+    src: url("police/Shrikhand-Regular.otf");
+  }
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("police/Roboto-Regular.ttf");
+  }
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("police/Roboto-Bold.ttf");
+  }
+
+/* FONT */
+
+$font-title: "Shrikhand-Regular", cursive;
+$font-main: "Roboto-Regular", sans-serif;
+$font-main-bold: "Roboto-Bold";
+
+/* COLOR */
+
+$bgcolor-main: #f6f6f6;
+$bgcolor-secondary: #f3f3f3;
+$bgcolor-footer: #354146;

@@ -1,0 +1,15 @@
+body {
+  border: solid 3px red;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  color: orange;
+}
+/*# sourceMappingURL=header_accueil.css.map */
