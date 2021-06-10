@@ -1,5 +1,7 @@
 body {
-@include body;
+  margin: auto;
+  max-width: 100%;
+  font-family: $font-main;
 }
 
 img {
@@ -12,6 +14,12 @@ img {
 }
 .font-title {
   font-family: $font-title;
+}
+
+#bloc_home_top{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 h1{
@@ -50,7 +58,11 @@ nav{
 }
 
 #button_home{
-  @include order_button;
+  border-radius: 100px;
+  padding: 0.5em;
+  font-size: 25px;
+  font-weight: 500;
+  width: auto;
 }
 
 nav{
@@ -74,7 +86,10 @@ nav{
 }
 
 .line_button{
-@include position_button;
+  display: flex;
+  justify-content: center;
+  background-color: $bgcolor-main;
+  padding-bottom: 2em;
 }
 
 @media screen and (max-width: 768px) {
