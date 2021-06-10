@@ -9,6 +9,15 @@ img {
   max-height: 100%;
 }
 
+a:link 
+{ 
+ text-decoration:none;
+} 
+
+button{
+  @include button_omf;
+}
+
 .bold{
   font-family: $font-main-bold;
 }
@@ -51,18 +60,12 @@ nav{
 }
 
 .border_figure{
-  border: 1px solid black;
   border-radius: 100%;
   position: relative;
-  left: -1.6em;
-}
-
-#button_home{
-  border-radius: 100px;
-  padding: 0.5em;
-  font-size: 25px;
-  font-weight: 500;
-  width: auto;
+  left: -2.1em;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px 10px;
 }
 
 nav{
@@ -79,6 +82,10 @@ nav{
   width: auto;
   margin-left: 2em;
   margin-right: 2em;
+  background-color: $bgcolor-main;
+  &:hover{
+    background-color: #f2eafb;
+  }
 }
 
 .marge_home{
@@ -96,7 +103,7 @@ nav{
   nav{
     flex-direction: column;
     margin-right: 0.5em;
-    margin-left: 0.5em;
+    margin-left: 1.5em;
   }
 
   .marge_h2_home{
@@ -112,7 +119,7 @@ nav{
 
 @media screen and (max-width: 480px) {
   body,
-  #button_home,
+  button,
   .blocs_fonc{
     font-size: $font-size-responsive;
   }

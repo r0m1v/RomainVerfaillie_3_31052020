@@ -1,0 +1,9 @@
+@mixin button_omf{
+    border-radius: 100px;
+    padding: 0.3em 1.5em;
+    font-size: 23px;
+    font-weight: 400;
+    width: auto;
+    background-image: linear-gradient($button-color1, $button-color2);
+    color: white;
+}
