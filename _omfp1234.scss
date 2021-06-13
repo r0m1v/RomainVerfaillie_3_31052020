@@ -12,14 +12,9 @@ img {
   display: flex;
   justify-content: center;
   }
-  
-  .h1_page{
+
+#h1_page{
       width: 80%;
-  }
-  
-  .top_page{
-      display: flex;
-      justify-content: center;
   }
 
   .font-title {
@@ -33,48 +28,78 @@ img {
   }
   
   .pos_icon{
-      display: flex;
-      justify-content: flex-start;
-      position: relative;
-      top: 3em;
+    display: flex;
+	justify-content: flex-start;
+	position: relative;
+	top: 3em;
   }
   
   /* section */
 
-  #bloc_section_page1{
+  .pos_icon_heart{
+    display: flex;
+    align-items: center;
+    margin-right: 0.5em;
+  }
+
+  .coeur-plein{
+    @include full_heart;
+    }
+    
+    .coeur-plein:hover{
+    /*background-image: linear-gradient($button-color1, $button-color2);*/
+    color:red;
+    }
+    
+    .coeur-vide{
+    @include empty_heart;
+    }
+
+.top_img-text{
+    display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+  .bloc_section_page{
       margin: 0 auto;
-      width: 80%;
-      border-radius: 20px;
-      position: relative;
-      top: -4em;
+      width: 80%;                                                                                                                      
       background-color: $bgcolor-main;
   }
   
-  #h2_page2{
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
+  .h2_page{
+	width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: absolute;
+	bottom: 0;
+	background-color: $bgcolor-main;
+	border-radius: 20px 20px 0 0;
   }
   
   .order_blocs{
   display: flex;
   flex-direction: row;
-  margin-bottom: 2em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin: 0 0.5em 2em 0.5em;
   }
   
+  .h3_pages{
+    border-bottom: 3px solid $bgcolor-h3;
+    width:  2.7em;
+  }
+
   .blocs_meals{
   width: 100%;
   margin-left: 0.5em;
   margin-right: 0.5em;
   }
-  
+ 
   .meals{
   border-radius: 15px;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-    background-color: white;
+  background-color: white;
   padding: 0 0.5em;
   }
 
@@ -96,12 +121,20 @@ img {
   
   @media screen and (max-width: 768px) {
   
-  #pos_icon{
+    #h1_page{
+        width: 95%;
+    }
+
+  .pos_icon{
   display: flex;
   justify-content: flex-start;
   }
   
-  #bloc_section_page1{
+  .h2_page{
+width: 100%;
+  }
+
+  .bloc_section_page{
       width: 100%;
   }
   
@@ -111,7 +144,11 @@ img {
   }
   
   .blocs_meals{
-      margin: 0;
+margin-bottom: 3em;
+      }
+
+      .meals{
+          margin-right: 0.5em;
       }
   
   }

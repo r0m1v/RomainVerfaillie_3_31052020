@@ -47,11 +47,24 @@
     margin-left: 0.5em;
   }
   
-  .pos_icon{
+  .pos_icon_heart{
     display: flex;
     align-items: center;
     margin-right: 0.5em;
   }
+
+  .coeur-plein{
+    @include full_heart;
+    }
+    
+    .coeur-plein:hover{
+    /*background-image: linear-gradient($button-color1, $button-color2);*/
+    color:red;
+    }
+    
+    .coeur-vide{
+  @include empty_heart;
+    }
   
   .size-icon{
     font-size: 1.5em;
