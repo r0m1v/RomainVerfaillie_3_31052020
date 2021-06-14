@@ -6,7 +6,7 @@ img {
   .bold{
     font-family: $font-main-bold;
   }
-  
+
   /* Head */
   header{
   display: flex;
@@ -102,6 +102,45 @@ img {
   background-color: white;
   padding: 0 0.5em;
   }
+
+  /*Animation*/
+
+  .anim_meal{
+    opacity: 0;
+    animation: animmeal 1000ms forwards;
+    }
+    
+    .anim_meal1 {
+        animation-delay: 0.4s;
+    }
+    
+    .anim_meal2 {
+        animation-delay: 0.6s;
+    }
+    
+    .anim_meal3 {
+        animation-delay: 0.8s;
+    }
+
+    .anim_meal4 {
+      animation-delay: 1s;
+  }
+    
+    
+    @keyframes animmeal {
+        from {
+            opacity:0;
+        position:relative;
+        top:1em;
+        }
+        to {
+            opacity:1;
+        position:relative;
+        top:0;
+        }
+    }
+
+    /* Fin Animation*/
 
   .meal{
       padding-top: 1em;
