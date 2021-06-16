@@ -12,15 +12,12 @@
     color: white;
 }
 
-@mixin full_heart{
-    font-size: 1.5em;
+@mixin button_omf_resp{
+    border-radius: 100px;
+    padding: 0.3em 1.5em;
+    font-size: $font-size-responsive;
+    font-weight: 400;
+    width: auto;
+    background-image: linear-gradient($button-color1, $button-color2);
     color: white;
-    position: relative;
-    left: 26.5px;
-    bottom: 1px;
-}
-
-@mixin empty_heart{
-    font-size: 1.8em;
-    font-weight: 400px;
 }

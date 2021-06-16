@@ -19,6 +19,7 @@ body {
   margin: auto;
   max-width: 100%;
   font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
 }
 
 img {
@@ -109,7 +110,7 @@ nav {
   border-radius: 100%;
   position: relative;
   left: -2.1em;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   padding: 5px 10px;
 }
@@ -177,14 +178,20 @@ nav {
   .blocs_fonc {
     max-width: 100%;
     margin: 0;
+    margin-bottom: 0.5em;
   }
 }
 
 @media screen and (max-width: 480px) {
-  body,
-  button,
-  .blocs_fonc {
+  button {
+    border-radius: 100px;
+    padding: 0.3em 1.5em;
     font-size: 5vmin;
+    font-weight: 400;
+    width: auto;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(pink), to(purple));
+    background-image: linear-gradient(pink, purple);
+    color: white;
   }
 }
 
@@ -262,36 +269,34 @@ h3 {
   margin-left: 0.5em;
 }
 
-.pos_icon_heart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 0.5em;
+/*
+  .pos_icon_heart{
+    display: flex;
+    align-items: center;
+    margin-right: 0.5em;
+  }*/
+.pos_icon_heart:hover .empty_heart {
+  display: none;
 }
 
-.coeur-plein {
-  font-size: 1.5em;
-  color: white;
-  position: relative;
-  left: 26.5px;
-  bottom: 1px;
+.pos_icon_heart:hover .full_heart {
+  display: block;
 }
 
-.coeur-plein:hover {
-  /*background-image: linear-gradient($button-color1, $button-color2);*/
-  color: red;
-}
-
-.coeur-vide {
-  font-size: 1.8em;
-  font-weight: 400px;
+.full_heart {
+  display: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(pink), to(purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .size-icon {
   font-size: 1.5em;
+}
+
+.marge_h2 {
+  position: relative;
+  left: 0.5em;
 }
 
 @media screen and (max-width: 768px) {
@@ -440,24 +445,18 @@ header {
   margin-right: 0.5em;
 }
 
-.coeur-plein {
-  font-size: 1.5em;
-  color: white;
-  position: relative;
-  left: 26.5px;
-  bottom: 1px;
-}
-
-.coeur-plein:hover {
-  /*background-image: linear-gradient($button-color1, $button-color2);*/
-  color: red;
-}
-
-.coeur-vide {
-  font-size: 1.8em;
-  font-weight: 400px;
-}
-
+/*
+  .coeur-plein{
+    @include full_heart;
+    &:hover{
+      color:red;
+    }
+    }
+ 
+    .coeur-vide{
+    @include empty_heart;
+    }
+*/
 .top_img-text {
   display: -webkit-box;
   display: -ms-flexbox;

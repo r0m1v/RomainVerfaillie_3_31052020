@@ -41,20 +41,18 @@ img {
     align-items: center;
     margin-right: 0.5em;
   }
-
+/*
   .coeur-plein{
     @include full_heart;
+    &:hover{
+      color:red;
     }
-    
-    .coeur-plein:hover{
-    /*background-image: linear-gradient($button-color1, $button-color2);*/
-    color:red;
     }
-    
+ 
     .coeur-vide{
     @include empty_heart;
     }
-
+*/
 .top_img-text{
     display: flex;
 	justify-content: center;

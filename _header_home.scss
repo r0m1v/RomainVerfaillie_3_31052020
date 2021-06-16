@@ -2,6 +2,7 @@ body {
   margin: auto;
   max-width: 100%;
   font-family: $font-main;
+  font-size: 16px;
 }
 
 img {
@@ -9,40 +10,39 @@ img {
   max-height: 100%;
 }
 
-a:link 
-{ 
- text-decoration:none;
-} 
+a:link {
+  text-decoration: none;
+}
 
-button{
+button {
   @include button_omf;
 }
 
-.bold{
+.bold {
   font-family: $font-main-bold;
 }
 .font-title {
   font-family: $font-title;
 }
 
-#bloc_home_top{
+#bloc_home_top {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-h1{
+h1 {
   display: flex;
   justify-content: center;
 }
 
-nav{
+nav {
   padding-bottom: 2em;
 }
 
-.marge_h2_home{
- display: flex;
- justify-content: center;
+.marge_h2_home {
+  display: flex;
+  justify-content: center;
 }
 
 #bloc_home1 {
@@ -59,22 +59,22 @@ nav{
   background-color: $bgcolor-main;
 }
 
-.border_figure{
+.border_figure {
   border-radius: 100%;
   position: relative;
   left: -2.1em;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   padding: 5px 10px;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
 
-.blocs_fonc{
+.blocs_fonc {
   border: 1px solid black;
   border-radius: 20px;
   padding: 1.3rem;
@@ -83,16 +83,16 @@ nav{
   margin-left: 2em;
   margin-right: 2em;
   background-color: $bgcolor-main;
-  &:hover{
+  &:hover {
     background-color: #f2eafb;
   }
 }
 
-.marge_home{
+.marge_home {
   padding-left: 0.5em;
 }
 
-.line_button{
+.line_button {
   display: flex;
   justify-content: center;
   background-color: $bgcolor-main;
@@ -100,28 +100,26 @@ nav{
 }
 
 @media screen and (max-width: 768px) {
-  nav{
+  nav {
     flex-direction: column;
     margin-right: 0.5em;
     margin-left: 1.5em;
   }
 
-  .marge_h2_home{
+  .marge_h2_home {
     display: flex;
     justify-content: flex-start;
   }
 
-  .blocs_fonc{
+  .blocs_fonc {
     max-width: 100%;
     margin: 0;
-}
-}
-
-@media screen and (max-width: 480px) {
-  body,
-  button,
-  .blocs_fonc{
-    font-size: $font-size-responsive;
+    margin-bottom: 0.5em;
   }
 }
 
+@media screen and (max-width: 480px) {
+  button{
+  @include button_omf_resp;
+  }
+}
