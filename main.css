@@ -445,18 +445,6 @@ header {
   margin-right: 0.5em;
 }
 
-/*
-  .coeur-plein{
-    @include full_heart;
-    &:hover{
-      color:red;
-    }
-    }
- 
-    .coeur-vide{
-    @include empty_heart;
-    }
-*/
 .top_img-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -510,6 +498,13 @@ header {
   width: 100%;
   margin-left: 0.5em;
   margin-right: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
 }
 
 .meals {
@@ -517,7 +512,26 @@ header {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   background-color: white;
-  padding: 0 0.5em;
+  padding: 0 0.5em 0 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis ".";
+  white-space: nowrap;
+}
+
+.meals:hover .end_meal {
+  -webkit-transform: translatex(-78px);
+          transform: translatex(-78px);
+}
+
+.meals:hover .icon-check {
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms;
+  transition: transform 1000ms;
+  transition: transform 1000ms, -webkit-transform 1000ms;
+  -webkit-transform: skewX(0deg);
+          transform: skewX(0deg);
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 
 /*Animation*/
@@ -575,7 +589,8 @@ header {
 
 /* Fin Animation*/
 .meal {
-  padding-top: 1em;
+  white-space: nowrap;
+  margin-bottom: -0.5em;
 }
 
 .mealandprice {
@@ -588,7 +603,39 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: -2em;
+}
+
+.end_meal {
+  position: relative;
+  left: 5.6em;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+/* Icone */
+.icon-check {
+  display: none;
+  font-size: 15px;
+  border-radius: 50px;
+  color: #99e2d0;
+  background-color: white;
+  padding: 10px 10px;
+  margin-right: 1em;
+  margin-left: 1em;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+.pos_icone {
+  background-color: #99e2d0;
+  padding: 1.85em 0.5em 2em 0.5em;
+  position: relative;
+  top: -16px;
+  margin-left: 12px;
 }
 
 .button_bot_pages {
@@ -619,19 +666,27 @@ header {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: wrap column;
+            flex-flow: wrap column;
   }
   .blocs_meals {
     margin-bottom: 3em;
+    width: auto;
   }
   .meals {
     margin-right: 0.5em;
+    text-overflow: none;
+    white-space: none;
+  }
+  .end_meal {
+    position: relative;
+    left: 5.6em;
   }
 }
 
 @media screen and (max-width: 480px) {
   body,
+  .end_meal,
   .button_bot_pages {
     font-size: 5vmin;
   }

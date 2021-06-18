@@ -1,198 +1,232 @@
 img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .bold{
-    font-family: $font-main-bold;
-  }
-
-  /* Head */
-  header{
-  display: flex;
-  justify-content: center;
-  }
-
-#h1_page{
-      width: 80%;
-  }
-
-  .font-title {
-    font-family: $font-title;
-  }
-  
-  .photos_pages{
-      width: 100%;
-      height: 30em;
-      object-fit: cover;
-  }
-  
-  .pos_icon{
-    display: flex;
-	justify-content: flex-start;
-	position: relative;
-	top: 3em;
-  }
-  
-  /* section */
-
-  .pos_icon_heart{
-    display: flex;
-    align-items: center;
-    margin-right: 0.5em;
-  }
-/*
-  .coeur-plein{
-    @include full_heart;
-    &:hover{
-      color:red;
-    }
-    }
- 
-    .coeur-vide{
-    @include empty_heart;
-    }
-*/
-.top_img-text{
-    display: flex;
-	justify-content: center;
-	position: relative;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-  .bloc_section_page{
-      margin: 0 auto;
-      width: 80%;                                                                                                                      
-      background-color: $bgcolor-main;
-  }
-  
-  .h2_page{
-	width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    position: absolute;
-	bottom: 0;
-	background-color: $bgcolor-main;
-	border-radius: 20px 20px 0 0;
-  }
-  
-  .order_blocs{
+.bold {
+  font-family: $font-main-bold;
+}
+
+/* Head */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#h1_page {
+  width: 80%;
+}
+
+.font-title {
+  font-family: $font-title;
+}
+
+.photos_pages {
+  width: 100%;
+  height: 30em;
+  object-fit: cover;
+}
+
+.pos_icon {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  top: 3em;
+}
+
+/* section */
+
+.pos_icon_heart {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5em;
+}
+
+.top_img-text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.bloc_section_page {
+  margin: 0 auto;
+  width: 80%;
+  background-color: $bgcolor-main;
+}
+
+.h2_page {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  position: absolute;
+  bottom: 0;
+  background-color: $bgcolor-main;
+  border-radius: 20px 20px 0 0;
+}
+
+.order_blocs {
   display: flex;
   flex-direction: row;
   margin: 0 0.5em 2em 0.5em;
-  }
-  
-  .h3_pages{
-    border-bottom: 3px solid $bgcolor-h3;
-    width:  2.7em;
-  }
+}
 
-  .blocs_meals{
+.h3_pages {
+  border-bottom: 3px solid $bgcolor-tertiary;
+  width: 2.7em;
+}
+
+.blocs_meals {
   width: 100%;
   margin-left: 0.5em;
   margin-right: 0.5em;
-  }
- 
-  .meals{
+  display: flex;
+  flex-flow: wrap column;
+}
+
+.meals {
   border-radius: 15px;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   background-color: white;
-  padding: 0 0.5em;
+  padding: 0 0.5em 0 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis ".";
+  white-space: nowrap;
+  &:hover .end_meal {
+    transform: translatex(-78px);
   }
+  &:hover .icon-check {
+    transition: transform 1000ms;
+    transform: skewX(0deg);
+    animation-direction: normal;
+  }
+}
 
-  /*Animation*/
+/*Animation*/
 
-  .anim_meal{
+.anim_meal {
+  opacity: 0;
+  animation: animmeal 1000ms forwards;
+}
+
+.anim_meal1 {
+  animation-delay: 0.4s;
+}
+
+.anim_meal2 {
+  animation-delay: 0.6s;
+}
+
+.anim_meal3 {
+  animation-delay: 0.8s;
+}
+
+.anim_meal4 {
+  animation-delay: 1s;
+}
+
+@keyframes animmeal {
+  from {
     opacity: 0;
-    animation: animmeal 1000ms forwards;
-    }
-    
-    .anim_meal1 {
-        animation-delay: 0.4s;
-    }
-    
-    .anim_meal2 {
-        animation-delay: 0.6s;
-    }
-    
-    .anim_meal3 {
-        animation-delay: 0.8s;
-    }
-
-    .anim_meal4 {
-      animation-delay: 1s;
+    position: relative;
+    top: 1em;
   }
-    
-    
-    @keyframes animmeal {
-        from {
-            opacity:0;
-        position:relative;
-        top:1em;
-        }
-        to {
-            opacity:1;
-        position:relative;
-        top:0;
-        }
-    }
-
-    /* Fin Animation*/
-
-  .meal{
-      padding-top: 1em;
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0;
   }
+}
 
-  .mealandprice{
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-top: -2em;
-  }
+/* Fin Animation*/
 
-  .button_bot_pages{
-      padding-bottom: 2em;
+.meal {
+  white-space: nowrap;
+  margin-bottom: -0.5em;
+}
 
-  }
-  
-  @media screen and (max-width: 768px) {
-  
-    #h1_page{
-        width: 95%;
-    }
-
-  .pos_icon{
+.mealandprice {
   display: flex;
-  justify-content: flex-start;
-  }
-  
-  .h2_page{
-width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.end_meal {
+  position: relative;
+  left: 5.6em;
+  transition: transform 400ms ease-in-out;
+}
+
+/* Icone */
+.icon-check {
+  display: none;
+  font-size: 15px;
+  border-radius: 50px;
+  color: $bgcolor-tertiary;
+  background-color: white;
+  padding: 10px 10px;
+  margin-right: 1em;
+  margin-left: 1em;
+  transition: transform 400ms ease-in-out;
+}
+
+.pos_icone {
+  background-color: $bgcolor-tertiary;
+  padding: 1.85em 0.5em 2em 0.5em;
+  position: relative;
+  top: -16px;
+  margin-left: 12px;
+}
+
+.button_bot_pages {
+  padding-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  #h1_page {
+    width: 95%;
   }
 
-  .bloc_section_page{
-      width: 100%;
-  }
-  
-  .order_blocs{
-      display: flex;
-      flex-direction: column;
-  }
-  
-  .blocs_meals{
-margin-bottom: 3em;
-      }
-
-      .meals{
-          margin-right: 0.5em;
-      }
-  
+  .pos_icon {
+    display: flex;
+    justify-content: flex-start;
   }
 
-  @media screen and (max-width: 480px) {
-    body,
-    .button_bot_pages{
-      font-size: $font-size-responsive;
-    }
+  .h2_page {
+    width: 100%;
   }
+
+  .bloc_section_page {
+    width: 100%;
+  }
+
+  .order_blocs {
+    display: flex;
+    flex-flow: wrap column;
+  }
+
+  .blocs_meals {
+    margin-bottom: 3em;
+    width: auto;
+  }
+
+  .meals {
+    margin-right: 0.5em;
+    text-overflow: none;
+    white-space: none;
+}
+
+.end_meal {
+  position: relative;
+  left: 5.6em;
+}
+}
+
+@media screen and (max-width: 480px) {
+  body,
+  .end_meal,
+  .button_bot_pages {
+    font-size: $font-size-responsive;
+  }
+}
