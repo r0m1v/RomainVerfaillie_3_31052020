@@ -4,6 +4,25 @@ body {
   font-family: $font-main;
   font-size: 16px;
 }
+/*animation home*/
+
+.animhome_delay{
+animation: animhome 5s;
+}
+
+@keyframes animhome{
+  0%{
+opacity:0.3;
+  }
+  75%{
+    opacity: 0.3;
+  }
+  100%{
+opacity: 1;
+  }
+}
+
+/* Fin animation home*/
 
 img {
   max-width: 100%;
