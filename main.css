@@ -24,8 +24,8 @@ body {
 
 /*animation home*/
 .animhome_delay {
-  -webkit-animation: animhome 5s;
-          animation: animhome 5s;
+  -webkit-animation: animhome 6.5s;
+          animation: animhome 6.5s;
 }
 
 @-webkit-keyframes animhome {
@@ -49,6 +49,154 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+#boxload {
+  width: 20em;
+  height: 20em;
+  position: absolute;
+  top: 40%;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #354146;
+  -webkit-animation: animdisp 5s forwards;
+          animation: animdisp 5s forwards;
+  z-index: 1;
+}
+
+.title-load {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  right: 50%;
+  color: white;
+  font-family: "Shrikhand-Regular", cursive;
+  font-size: 30px;
+}
+
+#boxballs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50%;
+}
+
+.ball1,
+.ball2 {
+  background-color: purple;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
+
+.ball1 {
+  -webkit-transform-origin: 50% -100px;
+          transform-origin: 50% -100px;
+  -webkit-animation: ball1 1s ease-out infinite alternate;
+          animation: ball1 1s ease-out infinite alternate;
+}
+
+.ball3,
+.ball4 {
+  background-color: pink;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
+
+.ball5,
+.ball6 {
+  background-color: #99e2d0;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
+
+.ball6 {
+  -webkit-transform-origin: 50% -100px;
+          transform-origin: 50% -100px;
+  -webkit-animation: ball6 1s ease-out 1s infinite alternate;
+          animation: ball6 1s ease-out 1s infinite alternate;
+}
+
+@-webkit-keyframes ball1 {
+  0%, 50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+}
+
+@keyframes ball1 {
+  0%, 50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+}
+
+@-webkit-keyframes ball6 {
+  0%, 50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+}
+
+@keyframes ball6 {
+  0%, 50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+}
+
+@-webkit-keyframes animdisp {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animdisp {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
