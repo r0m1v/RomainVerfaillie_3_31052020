@@ -45,6 +45,7 @@
   
   .text_img{
     margin-left: 0.5em;
+    color: black;
   }
   /*
   .pos_icon_heart{
@@ -52,6 +53,12 @@
     align-items: center;
     margin-right: 0.5em;
   }*/
+
+.far,
+.fas{
+  font-size: 20px;
+  color: black;
+}
 
   .pos_icon_heart:hover{
   .empty_heart{
@@ -68,7 +75,6 @@
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
   }
-
   .size-icon{
     font-size: 1.5em;
   }
