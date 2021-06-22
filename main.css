@@ -449,12 +449,44 @@ h3 {
   color: black;
 }
 
-/*
-  .pos_icon_heart{
-    display: flex;
-    align-items: center;
-    margin-right: 0.5em;
-  }*/
+.new {
+  z-index: 1;
+  position: absolute;
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 5px;
+  -webkit-animation: logonew;
+          animation: logonew;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@-webkit-keyframes logonew {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logonew {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .fa-heart {
   font-size: 20px;
   color: black;
@@ -676,8 +708,6 @@ header {
 
 .blocs_meals {
   width: 100%;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
 }
 
 .h3_pages {
@@ -698,6 +728,7 @@ header {
 .blocs_meals {
   width: 80%;
   margin: 0 auto;
+  padding: 0.5em;
 }
 
 .meals {
@@ -712,7 +743,8 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  border: 2px solid blue;
+  background-color: white;
+  margin: 1em 0;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -740,7 +772,8 @@ header {
 }
 
 .titleandtext {
-  border: 2px solid purple;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
 }
 
 .meal_price {
@@ -750,7 +783,6 @@ header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: 2px solid red;
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
@@ -758,9 +790,12 @@ header {
   margin-right: 1em;
 }
 
+.price {
+  padding-bottom: 0.5em;
+}
+
 .meal_icone {
-  border: 2px solid green;
-  background-color: green;
+  background-color: #99e2d0;
   padding: 0 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -782,7 +817,7 @@ header {
   transition: transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   background-color: white;
-  color: green;
+  color: #99e2d0;
   padding: 10px 10px;
 }
 
@@ -883,6 +918,7 @@ header {
   }
   .bloc_section_page {
     width: 100%;
+    margin-right: 0.5em;
   }
   .order_blocs {
     display: -webkit-box;
@@ -890,12 +926,12 @@ header {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: wrap column;
-            flex-flow: wrap column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .blocs_meals {
-    margin-bottom: 3em;
-    width: auto;
+    margin-bottom: 2em;
+    width: 95%;
   }
 }
 

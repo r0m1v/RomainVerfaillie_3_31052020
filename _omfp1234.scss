@@ -75,8 +75,6 @@ header {
 
 .blocs_meals {
   width: 100%;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
 }
 
 .h3_pages {
@@ -92,6 +90,7 @@ header {
   .blocs_meals {
     width: 80%;
     margin: 0 auto;
+    padding: 0.5em;
   }
   
   .meals{
@@ -99,7 +98,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  border: 2px solid blue;
+  background-color: white;
+  margin: 1em 0;
   border-radius: 20px;
   overflow: hidden;
   &:hover .meal_price{
@@ -115,23 +115,25 @@ header {
       animation-direction: normal;
     }
   }
-  
-  
+
   .titleandtext{
-    border: 2px solid purple;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
   }
   
   .meal_price{
   display: flex;
   align-items: flex-end;
-  border: 2px solid red;
   transition: transform 400ms ease-in-out;
   margin-right: 1em;
   }
   
+  .price{
+  padding-bottom: 0.5em;
+  }
+
   .meal_icone{
-    border: 2px solid green;
-    background-color: green;
+    background-color: $bgcolor-tertiary;
     padding: 0 2em;
     display: flex;
     align-items: center;
@@ -143,7 +145,7 @@ header {
     border-radius: 50px;
     transition: transform 400ms ease-in-out;
     background-color: white;
-    color: green;
+    color: $bgcolor-tertiary;
     padding: 10px 10px;
   }
   @keyframes animicone{
@@ -215,18 +217,20 @@ header {
 
   .bloc_section_page {
     width: 100%;
+    margin-right: 0.5em;
   }
 
   .order_blocs {
     display: flex;
-    flex-flow: wrap column;
+    flex-direction: column;
   }
 
   .blocs_meals {
-    margin-bottom: 3em;
-    width: auto;
+    margin-bottom: 2em;
+    width: 95%;
   }
 }
+
 
 @media screen and (max-width: 480px) {
   body,
