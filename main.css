@@ -63,6 +63,7 @@ body {
   -webkit-animation: animdisp 5s forwards;
           animation: animdisp 5s forwards;
   z-index: 1;
+  pointer-events: none;
 }
 
 .title-load {
@@ -177,10 +178,7 @@ body {
 }
 
 @-webkit-keyframes animdisp {
-  0% {
-    opacity: 1;
-  }
-  99% {
+  0%, 99% {
     opacity: 1;
   }
   100% {
@@ -189,10 +187,7 @@ body {
 }
 
 @keyframes animdisp {
-  0% {
-    opacity: 1;
-  }
-  99% {
+  0%, 99% {
     opacity: 1;
   }
   100% {
@@ -338,6 +333,10 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  #boxload {
+    width: 18em;
+    height: 18em;
+  }
   nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -353,6 +352,7 @@ nav {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin-left: 1em;
   }
   .blocs_fonc {
     max-width: 100%;
@@ -446,6 +446,7 @@ h3 {
 
 .text_img {
   margin-left: 0.5em;
+  color: black;
 }
 
 /*
@@ -454,6 +455,11 @@ h3 {
     align-items: center;
     margin-right: 0.5em;
   }*/
+.fa-heart {
+  font-size: 20px;
+  color: black;
+}
+
 .pos_icon_heart:hover .empty_heart {
   display: none;
 }
@@ -634,12 +640,6 @@ header {
   position: relative;
 }
 
-.bloc_section_page {
-  margin: 0 auto;
-  width: 80%;
-  background-color: #f6f6f6;
-}
-
 .h2_page {
   width: 80%;
   display: -webkit-box;
@@ -657,6 +657,12 @@ header {
   border-radius: 20px 20px 0 0;
 }
 
+.bloc_section_page {
+  margin: 0 auto;
+  width: 80%;
+  background-color: #f6f6f6;
+}
+
 .order_blocs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -668,38 +674,58 @@ header {
   margin: 0 0.5em 2em 0.5em;
 }
 
+.blocs_meals {
+  width: 100%;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
 .h3_pages {
   border-bottom: 3px solid #99e2d0;
   width: 2.7em;
 }
 
-.blocs_meals {
-  width: 100%;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+.bloc_mandp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: wrap column;
-          flex-flow: wrap column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.blocs_meals {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .meals {
-  border-radius: 15px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  background-color: white;
-  padding: 0 0.5em 0 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border: 2px solid blue;
+  border-radius: 20px;
   overflow: hidden;
-  text-overflow: ellipsis ".";
-  white-space: nowrap;
 }
 
-.meals:hover .end_meal {
-  -webkit-transform: translatex(-78px);
-          transform: translatex(-78px);
+.meals:hover .meal_price {
+  -webkit-transform: translatex(-100px);
+          transform: translatex(-100px);
+}
+
+.meals:hover .meal_icone {
+  position: relative;
+  -webkit-transform: translatex(-100px);
+          transform: translatex(-100px);
 }
 
 .meals:hover .icon-check {
@@ -711,6 +737,75 @@ header {
           transform: skewX(0deg);
   -webkit-animation-direction: normal;
           animation-direction: normal;
+}
+
+.titleandtext {
+  border: 2px solid purple;
+}
+
+.meal_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border: 2px solid red;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  margin-right: 1em;
+}
+
+.meal_icone {
+  border: 2px solid green;
+  background-color: green;
+  padding: 0 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  margin-right: -6.5em;
+}
+
+.icon-check {
+  border-radius: 50px;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  background-color: white;
+  color: green;
+  padding: 10px 10px;
+}
+
+@-webkit-keyframes animicone {
+  to {
+    position: relative;
+    left: 0;
+  }
+  from {
+    position: relative;
+    left: -78px;
+  }
+}
+
+@keyframes animicone {
+  to {
+    position: relative;
+    left: 0;
+  }
+  from {
+    position: relative;
+    left: -78px;
+  }
 }
 
 /*Animation*/
@@ -767,56 +862,6 @@ header {
 }
 
 /* Fin Animation*/
-.meal {
-  white-space: nowrap;
-  margin-bottom: -0.5em;
-}
-
-.mealandprice {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.end_meal {
-  position: relative;
-  left: 5.6em;
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-}
-
-/* Icone */
-.icon-check {
-  display: none;
-  font-size: 15px;
-  border-radius: 50px;
-  color: #99e2d0;
-  background-color: white;
-  padding: 10px 10px;
-  margin-right: 1em;
-  margin-left: 1em;
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-}
-
-.pos_icone {
-  background-color: #99e2d0;
-  padding: 1.85em 0.5em 2em 0.5em;
-  position: relative;
-  top: -16px;
-  margin-left: 12px;
-}
-
 .button_bot_pages {
   padding-bottom: 2em;
 }
@@ -852,20 +897,10 @@ header {
     margin-bottom: 3em;
     width: auto;
   }
-  .meals {
-    margin-right: 0.5em;
-    text-overflow: none;
-    white-space: none;
-  }
-  .end_meal {
-    position: relative;
-    left: 5.6em;
-  }
 }
 
 @media screen and (max-width: 480px) {
   body,
-  .end_meal,
   .button_bot_pages {
     font-size: 5vmin;
   }

@@ -32,6 +32,7 @@ opacity: 1;
   background-color: #354146;
   animation: animdisp 5s forwards;
   z-index: 1;
+  pointer-events:none;
 }
 
 .title-load{
@@ -56,7 +57,7 @@ opacity: 1;
 
 .ball1,
 .ball2{
-background-color: purple;
+background-color: $home-ball1;
 width: 1em;
 height: 1em;
 border-radius: 50%;
@@ -70,7 +71,7 @@ animation: ball1 1s ease-out infinite alternate;
 
 .ball3,
 .ball4{
-background-color: pink;
+background-color: $home-ball2;
 width: 1em;
 height: 1em;
 border-radius: 50%;
@@ -78,7 +79,7 @@ border-radius: 50%;
 
 .ball5,
 .ball6{
-background-color: #99e2d0;
+background-color: $home-ball3;
 width: 1em;
 height: 1em;
 border-radius: 50%;
@@ -108,11 +109,8 @@ transform: rotate(60deg);
   }
 
   @keyframes animdisp{
-    0%{
+    0%, 99%{
 opacity:1;
-    }
-    99%{
-opacity: 1;
     }
     100%{
 opacity: 0;
@@ -216,6 +214,11 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  #boxload{
+    width: 18em;
+    height: 18em;
+  }
+
   nav {
     flex-direction: column;
     margin-right: 0.5em;
@@ -225,6 +228,7 @@ nav {
   .marge_h2_home {
     display: flex;
     justify-content: flex-start;
+    margin-left: 1em;
   }
 
   .blocs_fonc {
