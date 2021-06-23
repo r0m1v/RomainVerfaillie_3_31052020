@@ -1,5 +1,16 @@
-@mixin d-flex {
+@mixin d-flex_j-c-c {
   display: flex;
+  justify-content: center;
+}
+
+@mixin d-flex_f-d-c{
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin d-flex_f-d-r{
+  display: flex;
+  flex-direction: row;
 }
 
 @mixin button_omf {

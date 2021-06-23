@@ -5,13 +5,11 @@
 }
 
 #blocs_restau {
-  display: flex;
-  flex-direction: column;
+  @include d-flex_f-d-c;
 }
 
 .bloc_restau {
-  display: flex;
-  flex-direction: row;
+  @include d-flex_f-d-r;
   justify-content: center;
 }
 
@@ -20,9 +18,8 @@ h3 {
 }
 
 .border {
+  @include d-flex_f-d-c;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
   width: 30%;
   margin: 1em;
   overflow: hidden;
@@ -38,8 +35,7 @@ h3 {
 .text_icone {
   background-color: white;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  @include d-flex_f-d-r;
   justify-content: space-between;
   padding-bottom: 10px;
 }
@@ -62,7 +58,6 @@ h3 {
   animation-iteration-count: infinite;
   animation-duration: 5s;
 }
-
 
 .pos_icon_heart:hover {
   .empty_heart {
@@ -98,8 +93,7 @@ h3 {
 
 @media screen and (max-width: 768px) {
   .bloc_restau {
-    display: flex;
-    flex-direction: column;
+    @include d-flex_f-d-c;
     margin-right: 1em;
     margin-left: 1em;
   }

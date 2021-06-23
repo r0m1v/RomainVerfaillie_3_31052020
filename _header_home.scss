@@ -16,8 +16,7 @@
 }
 
 .title-load {
-  display: flex;
-  justify-content: center;
+  @include d-flex_j-c-c;
   position: absolute;
   top: 20%;
   left: 50%;
@@ -28,9 +27,8 @@
 }
 
 #boxballs {
-  display: flex;
+  @include d-flex_j-c-c;
   align-items: baseline;
-  justify-content: center;
   padding-top: 50%;
 }
 
@@ -67,32 +65,24 @@
 }
 
 #bloc_home_top {
-  display: flex;
-  flex-direction: column;
+  @include d-flex_f-d-c;
   width: 100%;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-}
-
+h1,
 .marge_h2_home {
-  display: flex;
-  justify-content: center;
+  @include d-flex_j-c-c;
 }
 
 #bloc_home1 {
-  display: flex;
-  justify-content: center;
+  @include d-flex_j-c-c;
   background-color: $bgcolor-secondary;
   padding: 1em;
   box-shadow: inset 0px 11px 8px -10px #ccc;
 }
 
 #bloc_home2 {
-  display: flex;
-  text-align: center;
+  @include d-flex_j-c-c;
   flex-direction: column;
   background-color: $bgcolor-main;
 }
@@ -107,8 +97,7 @@ h1 {
 }
 
 nav {
-  display: flex;
-  justify-content: center;
+  @include d-flex_j-c-c;
   flex-direction: row;
   padding-bottom: 2em;
 }
@@ -133,8 +122,7 @@ nav {
 }
 
 .line_button {
-  display: flex;
-  justify-content: center;
+  @include d-flex_j-c-c;
   background-color: $bgcolor-main;
   padding-bottom: 2em;
 }
@@ -146,7 +134,7 @@ nav {
   }
 
   nav {
-    flex-direction: column;
+    @include d-flex_f-d-c;
     margin-right: 0.5em;
     margin-left: 1.5em;
   }

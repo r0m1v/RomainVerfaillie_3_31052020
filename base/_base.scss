@@ -33,8 +33,7 @@ button {
 }
 
 header {
-  display: flex;
-  justify-content: center;
+  @include d-flex_j-c-c;
 }
 
 @media screen and (max-width: 480px) {
