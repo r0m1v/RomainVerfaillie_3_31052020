@@ -1,29 +1,36 @@
-@mixin d-flex{
-    display: flex;
+@mixin d-flex {
+  display: flex;
 }
 
-@mixin button_omf{
-    border-radius: 100px;
-    padding: 0.3em 1.5em;
-    font-size: 23px;
-    font-weight: 400;
-    width: auto;
-    background-image: linear-gradient($button-color1, $button-color2);
-    color: white;
+@mixin button_omf {
+  border-radius: 100px;
+  padding: 0.3em 1.5em;
+  font-size: 23px;
+  font-weight: 400;
+  width: auto;
+  background-image: linear-gradient($button-color1, $button-color2);
+  color: white;
 }
 
-@mixin button_omf_resp{
-    border-radius: 100px;
-    padding: 0.3em 1.5em;
-    font-size: $font-size-responsive;
-    font-weight: 400;
-    width: auto;
-    background-image: linear-gradient($button-color1, $button-color2);
-    color: white;
+@mixin button_omf_resp {
+  border-radius: 100px;
+  padding: 0.3em 1.5em;
+  font-size: $font-size-responsive;
+  font-weight: 400;
+  width: auto;
+  background-image: linear-gradient($button-color1, $button-color2);
+  color: white;
 }
 
 
-@mixin icones{
-    font-size: 20px;
-    color: black; 
+@mixin balls_anim {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
+
+@mixin anim_ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

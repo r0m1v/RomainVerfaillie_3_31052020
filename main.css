@@ -1,33 +1,21 @@
 @font-face {
   font-family: "Shrikhand-Regular";
-  src: url("police/Shrikhand-Regular.otf");
+  src: url("polices/Shrikhand-Regular.otf");
 }
 
 @font-face {
   font-family: "Roboto-Regular";
-  src: url("police/Roboto-Regular.ttf");
+  src: url("polices/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: "Roboto-Bold";
-  src: url("police/Roboto-Bold.ttf");
+  src: url("polices/Roboto-Bold.ttf");
 }
 
 /* FONT */
 /* COLOR */
-body {
-  margin: auto;
-  max-width: 100%;
-  font-family: "Roboto-Regular", sans-serif;
-  font-size: 16px;
-}
-
-/*animation home*/
-.animhome_delay {
-  -webkit-animation: animhome 6.5s;
-          animation: animhome 6.5s;
-}
-
+/* Animation home */
 @-webkit-keyframes animhome {
   0% {
     opacity: 0.3;
@@ -39,7 +27,6 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes animhome {
   0% {
     opacity: 0.3;
@@ -52,6 +39,182 @@ body {
   }
 }
 
+/* Animation balls */
+@-webkit-keyframes ball1 {
+  0%,
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+}
+@keyframes ball1 {
+  0%,
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+}
+
+@-webkit-keyframes ball6 {
+  0%,
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+}
+
+@keyframes ball6 {
+  0%,
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+}
+
+@-webkit-keyframes animdisp {
+  0%,
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animdisp {
+  0%,
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Animation logo */
+@-webkit-keyframes logonew {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes logonew {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation coeur */
+@-webkit-keyframes animheart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animheart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation icones */
+@-webkit-keyframes animicone {
+  to {
+    position: relative;
+    left: 0;
+  }
+  from {
+    position: relative;
+    left: -78px;
+  }
+}
+@keyframes animicone {
+  to {
+    position: relative;
+    left: 0;
+  }
+  from {
+    position: relative;
+    left: -78px;
+  }
+}
+
+/* Animation menu */
+@-webkit-keyframes animmeal {
+  from {
+    opacity: 0;
+    position: relative;
+    top: 1em;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+@keyframes animmeal {
+  from {
+    opacity: 0;
+    position: relative;
+    top: 1em;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+
+body {
+  margin: auto;
+  max-width: 100%;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
+}
+
+.animhome_delay {
+  -webkit-animation: animhome 6.5s;
+          animation: animhome 6.5s;
+}
+
 #boxload {
   width: 20em;
   height: 20em;
@@ -62,6 +225,7 @@ body {
   background-color: #354146;
   -webkit-animation: animdisp 5s forwards;
           animation: animdisp 5s forwards;
+  /*5s*/
   z-index: 1;
   pointer-events: none;
 }
@@ -133,69 +297,6 @@ body {
           animation: ball6 1s ease-out 1s infinite alternate;
 }
 
-@-webkit-keyframes ball1 {
-  0%, 50% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
-  }
-}
-
-@keyframes ball1 {
-  0%, 50% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
-  }
-}
-
-@-webkit-keyframes ball6 {
-  0%, 50% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-  }
-}
-
-@keyframes ball6 {
-  0%, 50% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-  }
-}
-
-@-webkit-keyframes animdisp {
-  0%, 99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes animdisp {
-  0%, 99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Fin animation home*/
 img {
   max-width: 100%;
   max-height: 100%;
@@ -214,6 +315,12 @@ button {
   background-image: -webkit-gradient(linear, left top, left bottom, from(pink), to(purple));
   background-image: linear-gradient(pink, purple);
   color: white;
+}
+
+button:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
+  background-image: linear-gradient(purple, pink);
+  cursor: pointer;
 }
 
 .bold {
@@ -266,6 +373,8 @@ nav {
           justify-content: center;
   background-color: #f3f3f3;
   padding: 1em;
+  -webkit-box-shadow: inset 0px 11px 8px -10px #CCC;
+          box-shadow: inset 0px 11px 8px -10px #CCC;
 }
 
 #bloc_home2 {
@@ -303,7 +412,8 @@ nav {
 }
 
 .blocs_fonc {
-  border: 1px solid black;
+  -webkit-box-shadow: 2px 2px 2px 2px #CCC;
+          box-shadow: 2px 2px 2px 2px #CCC;
   border-radius: 20px;
   padding: 1.3rem;
   font-size: 1rem;
@@ -315,6 +425,7 @@ nav {
 
 .blocs_fonc:hover {
   background-color: #f2eafb;
+  cursor: help;
 }
 
 .marge_home {
@@ -467,30 +578,6 @@ h3 {
           animation-duration: 5s;
 }
 
-@-webkit-keyframes logonew {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes logonew {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .fa-arrow-left,
 .fa-heart {
   font-size: 20px;
@@ -503,9 +590,8 @@ h3 {
 
 .pos_icon_heart:hover .full_heart {
   display: block;
-  -webkit-transition: 2s;
-  transition: 2s;
-  opacity: 1;
+  -webkit-animation: animheart 0.5s;
+          animation: animheart 0.5s;
 }
 
 .full_heart {
@@ -513,7 +599,6 @@ h3 {
   background: -webkit-gradient(linear, left top, left bottom, from(pink), to(purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0;
 }
 
 .size-icon {
@@ -578,6 +663,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 2em;
+  gap: 8em;
 }
 
 .marge_footer {
@@ -587,7 +673,6 @@ footer {
 .links_footer {
   text-decoration: none;
   color: white;
-  padding-right: 8em;
 }
 
 @media screen and (max-width: 768px) {
@@ -609,6 +694,7 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 1em;
+    gap: 0;
   }
   .links_footer {
     margin-bottom: 8px;
@@ -793,7 +879,14 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 60%;
+  width: 55%;
+}
+
+.meals:hover h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 90%;
 }
 
 .titleandtext {
@@ -847,28 +940,6 @@ header {
   padding: 10px 10px;
 }
 
-@-webkit-keyframes animicone {
-  to {
-    position: relative;
-    left: 0;
-  }
-  from {
-    position: relative;
-    left: -78px;
-  }
-}
-
-@keyframes animicone {
-  to {
-    position: relative;
-    left: 0;
-  }
-  from {
-    position: relative;
-    left: -78px;
-  }
-}
-
 /*Animation*/
 .anim_meal {
   opacity: 0;
@@ -894,32 +965,6 @@ header {
 .anim_meal4 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
-}
-
-@-webkit-keyframes animmeal {
-  from {
-    opacity: 0;
-    position: relative;
-    top: 1em;
-  }
-  to {
-    opacity: 1;
-    position: relative;
-    top: 0;
-  }
-}
-
-@keyframes animmeal {
-  from {
-    opacity: 0;
-    position: relative;
-    top: 1em;
-  }
-  to {
-    opacity: 1;
-    position: relative;
-    top: 0;
-  }
 }
 
 /* Fin Animation*/

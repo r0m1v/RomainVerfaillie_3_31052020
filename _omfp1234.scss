@@ -1,18 +1,4 @@
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.bold {
-  font-family: $font-main-bold;
-}
-
 /* Head */
-header {
-  display: flex;
-  justify-content: center;
-}
-
 #h1_page {
   width: 80%;
 }
@@ -123,10 +109,12 @@ header {
       animation-direction: normal;
     }
     &:hover .titleandtext{
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 60%;
+      @include anim_ellipsis;
+      width: 55%;
+    }
+    &:hover h4{
+      @include anim_ellipsis;
+      width: 90%;
     }
   }
 
@@ -164,16 +152,6 @@ header {
     color: $bgcolor-tertiary;
     padding: 10px 10px;
   }
-  @keyframes animicone{
-    to{
-      position: relative;
-      left: 0;
-    }
-    from{
-      position: relative;
-      left: -78px;
-    }
-  }
 
 /*Animation*/
 
@@ -196,19 +174,6 @@ header {
 
 .anim_meal4 {
   animation-delay: 1s;
-}
-
-@keyframes animmeal {
-  from {
-    opacity: 0;
-    position: relative;
-    top: 1em;
-  }
-  to {
-    opacity: 1;
-    position: relative;
-    top: 0;
-  }
 }
 
 /* Fin Animation*/
@@ -244,13 +209,5 @@ header {
   .blocs_meals {
     margin-bottom: 2em;
     width: 95%;
-  }
-}
-
-
-@media screen and (max-width: 480px) {
-  body,
-  .button_bot_pages {
-    font-size: $font-size-responsive;
   }
 }

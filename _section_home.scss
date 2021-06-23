@@ -63,22 +63,6 @@ h3 {
   animation-duration: 5s;
 }
 
-@keyframes logonew {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fa-arrow-left,
-.fa-heart {
-@include icones;
-}
 
 .pos_icon_heart:hover {
   .empty_heart {
@@ -86,8 +70,7 @@ h3 {
   }
   .full_heart {
     display: block;
-    transition: 2s;
-    opacity: 1;
+    animation: animheart 0.5s;
   }
 }
 
@@ -102,8 +85,8 @@ h3 {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0;
 }
+
 .size-icon {
   font-size: 1.5em;
 }
