@@ -21,3 +21,9 @@
     background-image: linear-gradient($button-color1, $button-color2);
     color: white;
 }
+
+
+@mixin icones{
+    font-size: 20px;
+    color: black; 
+}

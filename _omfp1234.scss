@@ -75,12 +75,20 @@ header {
 
 .blocs_meals {
   width: 100%;
+  .h3_pages {
+    display: inline-block;
+    position: relative;
+  }
+  .h3_pages:before{
+    content: "";
+    position: absolute;
+    width: 2.7em;
+    margin-bottom: -5px;
+    bottom: 0;
+    border-bottom: 3px solid $bgcolor-tertiary;
+  }
 }
 
-.h3_pages {
-  border-bottom: 3px solid $bgcolor-tertiary;
-  width: 2.7em;
-}
 
 .bloc_mandp{
   display: flex;
@@ -114,13 +122,21 @@ header {
       transform: skewX(0deg);
       animation-direction: normal;
     }
+    &:hover .titleandtext{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 60%;
+    }
   }
 
   .titleandtext{
     padding-bottom: 0.5em;
     padding-left: 0.5em;
-  }
-  
+    width: 80%;
+    }
+
+
   .meal_price{
   display: flex;
   align-items: flex-end;

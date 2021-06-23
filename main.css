@@ -419,6 +419,7 @@ h3 {
   width: 30%;
   margin: 1em;
   overflow: hidden;
+  position: relative;
 }
 
 .photo_rest {
@@ -452,6 +453,9 @@ h3 {
 .new {
   z-index: 1;
   position: absolute;
+  top: 1em;
+  right: 0;
+  margin-right: 1em;
   background-color: #99e2d0;
   color: #1b6150;
   padding: 5px;
@@ -487,6 +491,7 @@ h3 {
   }
 }
 
+.fa-arrow-left,
 .fa-heart {
   font-size: 20px;
   color: black;
@@ -498,6 +503,9 @@ h3 {
 
 .pos_icon_heart:hover .full_heart {
   display: block;
+  -webkit-transition: 2s;
+  transition: 2s;
+  opacity: 1;
 }
 
 .full_heart {
@@ -505,6 +513,7 @@ h3 {
   background: -webkit-gradient(linear, left top, left bottom, from(pink), to(purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 .size-icon {
@@ -710,9 +719,18 @@ header {
   width: 100%;
 }
 
-.h3_pages {
-  border-bottom: 3px solid #99e2d0;
+.blocs_meals .h3_pages {
+  display: inline-block;
+  position: relative;
+}
+
+.blocs_meals .h3_pages:before {
+  content: "";
+  position: absolute;
   width: 2.7em;
+  margin-bottom: -5px;
+  bottom: 0;
+  border-bottom: 3px solid #99e2d0;
 }
 
 .bloc_mandp {
@@ -771,9 +789,17 @@ header {
           animation-direction: normal;
 }
 
+.meals:hover .titleandtext {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 60%;
+}
+
 .titleandtext {
   padding-bottom: 0.5em;
   padding-left: 0.5em;
+  width: 80%;
 }
 
 .meal_price {
