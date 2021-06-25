@@ -1,16 +1,5 @@
-@mixin d-flex_j-c-c {
+@mixin d-flex {
   display: flex;
-  justify-content: center;
-}
-
-@mixin d-flex_f-d-c{
-  display: flex;
-  flex-direction: column;
-}
-
-@mixin d-flex_f-d-r{
-  display: flex;
-  flex-direction: row;
 }
 
 @mixin button_omf {
@@ -33,14 +22,12 @@
   color: white;
 }
 
-
-@mixin balls_anim {
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
+@mixin icones {
+  font-size: 20px;
+  color: black;
 }
 
-@mixin anim_ellipsis {
+@mixin ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

@@ -5,13 +5,15 @@ footer{
 }
 
 #title-footer{
-    @include d-flex_j-c-c;
+    display: flex;
+    justify-content: center;
     color: white;
   }
   
   #bloc_footer{
-    @include d-flex_j-c-c;
+    display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-bottom: 2em;
     gap: 8em;
   }
@@ -34,7 +36,8 @@ footer{
       }
       
       #bloc_footer{
-        @include d-flex_f-d-c;
+        display: flex;
+        flex-direction: column;
         margin:  1em;
         gap: 0;
       }

@@ -1,8 +1,29 @@
-.animhome_delay {
-  animation: animhome 6.5s;
+body {
+  margin: auto;
+  max-width: 100%;
+  font-family: $font-main;
+  font-size: 16px;
 }
 
-#boxload {
+/*animation home*/
+
+.animhome_delay{
+animation: animhome 6.5s;
+}
+
+@keyframes animhome{
+  0%{
+opacity:0.3;
+  }
+  75%{
+    opacity: 0.3;
+  }
+  100%{
+opacity: 1;
+  }
+}
+
+#boxload{
   width: 20em;
   height: 20em;
   position: absolute;
@@ -10,13 +31,14 @@
   margin: 0 auto;
   border-radius: 20px;
   background-color: #354146;
-  animation: animdisp 5s forwards; /*5s*/
+  animation: animdisp 5s forwards;
   z-index: 1;
-  pointer-events: none;
+  pointer-events:none;
 }
 
-.title-load {
-  @include d-flex_j-c-c;
+.title-load{
+  display: flex;
+  justify-content: center;
   position: absolute;
   top: 20%;
   left: 50%;
@@ -26,63 +48,133 @@
   font-size: 30px;
 }
 
-#boxballs {
-  @include d-flex_j-c-c;
+
+#boxballs{
+  display: flex;
   align-items: baseline;
+  justify-content: center;
   padding-top: 50%;
 }
 
 .ball1,
-.ball2 {
-  background-color: $home-ball1;
-  @include balls_anim;
+.ball2{
+background-color: $home-ball1;
+width: 1em;
+height: 1em;
+border-radius: 50%;
 }
 
+.ball1{
+transform-origin: 50% -100px;
+animation: ball1 1s ease-out infinite alternate; 
+}
+
+
 .ball3,
-.ball4 {
-  background-color: $home-ball2;
-  @include balls_anim;
+.ball4{
+background-color: $home-ball2;
+width: 1em;
+height: 1em;
+border-radius: 50%;
 }
 
 .ball5,
-.ball6 {
-  background-color: $home-ball3;
-  @include balls_anim;
+.ball6{
+background-color: $home-ball3;
+width: 1em;
+height: 1em;
+border-radius: 50%;
 }
 
-.ball1 {
-  transform-origin: 50% -100px;
-  animation: ball1 1s ease-out infinite alternate;
+.ball6{
+transform-origin: 50% -100px;
+animation: ball6 1s ease-out 1s infinite alternate; 
 }
 
-.ball6 {
-  transform-origin: 50% -100px;
-  animation: ball6 1s ease-out 1s infinite alternate;
+@keyframes ball1{
+0%, 50%{
+transform: rotate(0);
+}
+100%{
+transform: rotate(60deg);
+}
 }
 
+@keyframes ball6{
+  0%, 50%{
+  transform: rotate(0);
+  }
+  100%{
+  transform: rotate(-60deg);
+  }
+  }
+
+  @keyframes animdisp{
+    0%, 99%{
+opacity:1;
+    }
+    100%{
+opacity: 0;
+    }
+  }
+
+/* Fin animation home*/
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+button {
+  @include button_omf;
+  &:hover{
+    background-image: linear-gradient($button-color2, $button-color1);
+    cursor: pointer;
+  }
+}
+
+.bold {
+  font-family: $font-main-bold;
+}
 .font-title {
   font-family: $font-title;
 }
 
 #bloc_home_top {
-  @include d-flex_f-d-c;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
-h1,
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  padding-bottom: 2em;
+}
+
 .marge_h2_home {
-  @include d-flex_j-c-c;
+  display: flex;
+  justify-content: center;
 }
 
 #bloc_home1 {
-  @include d-flex_j-c-c;
+  display: flex;
+  justify-content: center;
   background-color: $bgcolor-secondary;
   padding: 1em;
   box-shadow: inset 0px 11px 8px -10px #ccc;
 }
 
 #bloc_home2 {
-  @include d-flex_j-c-c;
+  display: flex;
+  text-align: center;
   flex-direction: column;
   background-color: $bgcolor-main;
 }
@@ -97,13 +189,12 @@ h1,
 }
 
 nav {
-  @include d-flex_j-c-c;
+  display: flex;
+  justify-content: center;
   flex-direction: row;
-  padding-bottom: 2em;
 }
 
 .blocs_fonc {
-  box-shadow: 2px 2px 2px 2px #ccc;
   border-radius: 20px;
   padding: 1.3rem;
   font-size: 1rem;
@@ -111,6 +202,7 @@ nav {
   margin-left: 2em;
   margin-right: 2em;
   background-color: $bgcolor-main;
+  box-shadow: 2px 2px 2px 2px #ccc;
   &:hover {
     background-color: #f2eafb;
     cursor: help;
@@ -122,19 +214,20 @@ nav {
 }
 
 .line_button {
-  @include d-flex_j-c-c;
+  display: flex;
+  justify-content: center;
   background-color: $bgcolor-main;
   padding-bottom: 2em;
 }
 
 @media screen and (max-width: 768px) {
-  #boxload {
+  #boxload{
     width: 18em;
     height: 18em;
   }
 
   nav {
-    @include d-flex_f-d-c;
+    flex-direction: column;
     margin-right: 0.5em;
     margin-left: 1.5em;
   }
@@ -152,3 +245,8 @@ nav {
   }
 }
 
+@media screen and (max-width: 480px) {
+  button{
+  @include button_omf_resp;
+  }
+}
