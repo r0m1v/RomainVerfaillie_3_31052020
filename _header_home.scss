@@ -7,23 +7,25 @@ body {
 
 /*animation home*/
 
-.animhome_delay{
-animation: animhome 6.5s;
+.animhome_delay {
+  animation: animhome 6.5s;
+  pointer-events: auto;
 }
-
-@keyframes animhome{
-  0%{
-opacity:0.3;
-  }
-  75%{
+@keyframes animhome {
+  0% {
+    pointer-events: none;
     opacity: 0.3;
   }
-  100%{
-opacity: 1;
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: none;
   }
 }
 
-#boxload{
+#boxload {
   width: 20em;
   height: 20em;
   position: absolute;
@@ -33,10 +35,10 @@ opacity: 1;
   background-color: #354146;
   animation: animdisp 5s forwards;
   z-index: 1;
-  pointer-events:none;
+  pointer-events: none;
 }
 
-.title-load{
+.title-load {
   display: flex;
   justify-content: center;
   position: absolute;
@@ -48,75 +50,70 @@ opacity: 1;
   font-size: 30px;
 }
 
-
-#boxballs{
+#boxballs {
   display: flex;
   align-items: baseline;
   justify-content: center;
   padding-top: 50%;
 }
 
+.ball1 {
+  transform-origin: 50% -100px;
+  animation: ball1 1s ease-out infinite alternate;
+}
+
 .ball1,
-.ball2{
-background-color: $home-ball1;
-width: 1em;
-height: 1em;
-border-radius: 50%;
+.ball2 {
+  background-color: $home-ball1;
+  @include balls_anim;
 }
-
-.ball1{
-transform-origin: 50% -100px;
-animation: ball1 1s ease-out infinite alternate; 
-}
-
 
 .ball3,
-.ball4{
-background-color: $home-ball2;
-width: 1em;
-height: 1em;
-border-radius: 50%;
+.ball4 {
+  background-color: $home-ball2;
+  @include balls_anim;
 }
 
 .ball5,
-.ball6{
-background-color: $home-ball3;
-width: 1em;
-height: 1em;
-border-radius: 50%;
+.ball6 {
+  background-color: $home-ball3;
+  @include balls_anim;
 }
 
-.ball6{
-transform-origin: 50% -100px;
-animation: ball6 1s ease-out 1s infinite alternate; 
+.ball6 {
+  transform-origin: 50% -100px;
+  animation: ball6 1s ease-out 1s infinite alternate;
 }
 
-@keyframes ball1{
-0%, 50%{
-transform: rotate(0);
-}
-100%{
-transform: rotate(60deg);
-}
+@keyframes ball1 {
+  0%,
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
 }
 
-@keyframes ball6{
-  0%, 50%{
-  transform: rotate(0);
+@keyframes ball6 {
+  0%,
+  50% {
+    transform: rotate(0);
   }
-  100%{
-  transform: rotate(-60deg);
+  100% {
+    transform: rotate(-60deg);
   }
-  }
+}
 
-  @keyframes animdisp{
-    0%, 99%{
-opacity:1;
-    }
-    100%{
-opacity: 0;
-    }
+@keyframes animdisp {
+  0%,
+  99% {
+    opacity: 1;
   }
+  100% {
+    opacity: 0;
+  }
+}
 
 /* Fin animation home*/
 
@@ -131,7 +128,7 @@ a:link {
 
 button {
   @include button_omf;
-  &:hover{
+  &:hover {
     background-image: linear-gradient($button-color2, $button-color1);
     cursor: pointer;
   }
@@ -221,7 +218,7 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  #boxload{
+  #boxload {
     width: 18em;
     height: 18em;
   }
@@ -246,7 +243,7 @@ nav {
 }
 
 @media screen and (max-width: 480px) {
-  button{
-  @include button_omf_resp;
+  button {
+    @include button_omf_resp;
   }
 }

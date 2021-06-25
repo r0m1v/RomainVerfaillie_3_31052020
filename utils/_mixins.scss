@@ -27,6 +27,12 @@
   color: black;
 }
 
+@mixin balls_anim {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
+
 @mixin ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
